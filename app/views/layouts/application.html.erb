@@ -33,15 +33,15 @@
           Greg's QuestionBox
         <% end %>
       </div>
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><%= link_to "Home", "#" %></li>
-        <% if logged_in? %>
-      <li>class= "active"</li>Logged in: <%= current_user.email %> | <%= link_to "Logout", logout_path %>
-    <% else %>
-      <%= link_to 'Login', login_path %> | <%= link_to 'Signup', signup_path %>
-    <% end %>
-        </ul>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><%= link_to "Home", root_path %></li>
+          </ul>
+       <% if logged_in? %>
+         <ul class="nav navbar-nav navbar-right">
+           <li><%= link_to "Logout", logout_path %></li>
+         </ul>
+       <% end %>
       </div>
     </div>
   </nav>
